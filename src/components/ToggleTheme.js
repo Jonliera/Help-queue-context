@@ -1,12 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const ToggleTheme = () => {
+const ToggleTheme = (props) => {
+  const { toggleTheme } = props;
   return (
     <>
-      <button>Toggle Theme</button>
+      <button onClick={toggleTheme}>Toggle Theme</button>
       <hr />
     </>
   );
+};
+
+ToggleTheme.propTypes = {
+  toggleTheme: PropTypes.func.isRequired,
 };
 
 export default ToggleTheme;
